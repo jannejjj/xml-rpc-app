@@ -21,7 +21,7 @@ def savedata(topic, title, text, timestamp):
             new_topic = ET.SubElement(root, "topic", name=topic)  # Add given topic as a subelement to root
             new_note = ET.SubElement(new_topic, "note", name=title)
             ET.SubElement(new_note, "text").text = text
-            ET.SubElement(new_note, "timestamp").text = text
+            ET.SubElement(new_note, "timestamp").text = timestamp
     except:
         print("There was an error saving the data!")
         return False
